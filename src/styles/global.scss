@@ -63,3 +63,87 @@ main {
     padding: 6px;
     margin-top: -16px;
 }
+.form {
+    margin: 64px 8% 36px 8%;
+    display: flex;
+    color: $gr-100;
+    text-align: center;
+
+    #form-text-1 {
+        margin-bottom: 24px;
+    }
+
+    #form-text-2 {
+        margin-bottom: 26px;
+        font-size: .85rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #form-cta {
+            font-size: .9rem;
+            span {
+                background-color: $green-300;
+                padding: 4px 8px;
+            }
+        }
+        input {
+            width: 100%;
+            margin-top: 12px;
+            font-size: 1.15rem;
+            padding: 8px;
+            border-radius: 2px;
+        }
+        button {
+            margin-top: 18px;
+            font-size: $ft-xmd;
+            width: 95%;
+            background-color: $green-200;
+            background-color: linear-gradient(45deg, $green-200 0%, $green-100 100%);
+            color: $gr-100;
+            padding: 12px 6px;
+            font-style: italic;
+            border-radius: 2px;
+            box-shadow: 2px 2px 12px rgba(0,0,0,.6);
+            transition: background-color .2s;
+            &:hover{
+                background-color: $green-300;
+            }
+            &:active{
+                background-color: $green-400;
+            }
+        }
+    }
+}
+
+.about {
+    .container {
+        background-color: $gr-200;
+        color: $gr-500;
+        padding: 24px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 12px;
+        h2 {
+            font-size: $ft-lg;
+            span {
+                text-decoration: underline;
+            }
+            margin-bottom: 16px;
+        }
+        ul {
+            li {
+                color: $gr-100;
+                background-color: $gr-500;
+                border-radius: 4px;
+                margin-top: 8px;
+                font-size: .8rem;
+                padding: 8px 6px;
+            }
+        }
+    }
+}
