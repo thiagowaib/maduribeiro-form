@@ -5,8 +5,61 @@
     font-family: "Montserrat", sans-serif;
 }
 *.garamond {
-    font-family: "EB Garamond", serif; font-weight: bold; font-style: italic;
+    font-family: "EB Garamond", serif; font-style: italic;
 }
-*.strong {
+strong {
     font-weight: bold;
+}
+
+// Global Style Definition
+main {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    background: rgb(30,30,30);
+    background: linear-gradient(45deg, rgba(30,30,30,1) 0%, rgba(60,60,60,1) 100%);
+}
+
+.banner {
+    .container {
+        background-image: url('../assets/images/banner.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 245px;
+        display: flex;
+        align-items: center;
+        .title {
+            display: flex;
+            flex-direction: column;
+            color: $gr-100;
+            margin-left: 8%;
+            padding: 10% 0;
+            border-radius: 100%;
+            background: rgb(0,0,0);
+            background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, transparent 75%);
+            #title-1 {
+                font-size: $ft-xlg;
+                padding-bottom: 4px;
+            }
+            #title-2 {
+                font-size: $ft-xxlg;
+            }
+            #title-3 {
+                margin-top: -6px;
+                font-size: $ft-xxlg;
+            }
+        } 
+    }
+}
+.line {
+    width: fit-content;
+    position: absolute;
+    left: -40%;
+    text-wrap: nowrap;
+    text-align: center;
+    transform: rotateZ(-3deg);
+    background-color: $gr-100;
+    padding: 6px;
+    margin-top: -16px;
 }
