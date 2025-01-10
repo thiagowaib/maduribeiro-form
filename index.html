@@ -15,9 +15,12 @@
     <!-- Scripting -->
      <script type="module" src="src/scripts/ping.ts" defer></script>
      <script type="module" src="src/scripts/form.ts" defer></script>
+     <script type="module" src="src/scripts/scroll.ts" defer></script>
 </head>
 <body>
     <main>
+        <div id="scroll-target"></div>
+        
         <section class="banner">
             <div class="container">
                 <h1 class="title garamond">
@@ -27,9 +30,10 @@
                 </h1>
             </div>
         </section>
-        <section class="line">
+        <section class="line" id="line-1">
             <strong>EXCLUSIVO EXCLUSIVO EXCLUSIVO EXCLUSIVO EXCLUSIVO EXCLUSIVO EXCLUSIVO EXCLUSIVO</strong>
         </section>
+        
         <section class="form">
             <div class="container">
                 <p id="form-text-1">
@@ -37,6 +41,10 @@
                     <br>o faturamento dos meus clientes e que você                      
                     <br>pode aplicar para ter um <strong>negócio escalável.</strong>
                 </p>
+                <div id="alert-container" class="alert hidden">
+                    <span id="alert-message"></span>
+                    <button id="alert-close">&times;</button>
+                </div>
                 <p id="form-text-2">
                     Quer fazer parte de algo <strong>exclusivo?</strong>
                     <br>Esse evento ainda é segredo, mas quem garantir 
@@ -44,9 +52,9 @@
                 </p>
                 <form id="form">
                     <p id="form-cta"><strong>Preencha o formulário e entre no <span>GRUPO VIP!</span></strong></p>
-                    <input type="text" placeholder="Nome Completo">
-                    <input type="text" placeholder="Seu melhor email">
-                    <input type="text" placeholder="WhatsApp (com DDD)">
+                    <input id="inp-name" type="text" placeholder="Nome Completo">
+                    <input id="inp-email" type="email" placeholder="Seu melhor email">
+                    <input id="inp-contact" type="text" placeholder="WhatsApp (com DDD)">
                     <button type="submit"><strong>Entre no GRUPO EXCLUSIVO</strong></button>
                 </form>
             </div>
@@ -66,6 +74,40 @@
                     <li>Transforme sua imagem digital</li>
                 </ul>
             </div>
+        </section>
+        <section class="target">
+            <div class="container">
+                <p id="target-text-1">
+                    Esse <strong>evento secreto</strong> é pra você que
+                    <br>quer aplicar <strong>métodos comprovados</strong>
+                    <br>para crescer a sua empresa, seja você:
+                </p>
+                <ul>
+                    <li>
+                        <h2 class="garamond"><strong>Médico</strong></h2>
+                        <p>Se você quer atrair mais pacientes, construir autoridade nas redes sociais e transformar sua clínica em uma referência.</p>
+                    </li>
+                    <li>
+                        <h2 class="garamond"><strong>Prestador de Serviço</strong></h2>
+                        <p>Se você deseja fechar mais contratos, mostrar o valor do seu trabalho e se destacar na internet.</p>
+                    </li>
+                    <li>
+                        <h2 class="garamond"><strong>Empreendedor</strong></h2>
+                        <p>Se seu objetivo é alavancar vendas, fortalecer sua marca e criar estratégias que realmente funcionem no digital</p>
+                    </li>
+                </ul>
+                <div id="target-cta">
+                    <h2 class="garamond"><strong>ATENÇÃO!</strong></h2>
+                    <p>
+                        Vagas limitadas para apenas <span><strong>100 participantes.</strong></span>
+                        <br>Garanta agora sua inscrição nesse evento exclusivo e comece 2025 com estratégias que realmente funcionam. Não perca essa chance!
+                    </p>
+                </div>
+                <button id="btn-scroll"><strong>Inscreva-se agora!</strong></button>
+            </div>
+        </section>
+        <section class="line" id="line-2">
+            <strong>TE ESPERO POR LÁ!    TE ESPERO POR LÁ!    TE ESPERO POR LÁ!    TE ESPERO POR LÁ!</strong>
         </section>
     </main>
 </body> 

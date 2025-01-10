@@ -6,7 +6,6 @@ const pingServer = async () => {
             "auth": "9f6a6095bc6158b2b189eb009fe6b44d"
         }
       });
-      console.log("Ping!")
     } catch (error:any) {
       console.error({error});
     }
