@@ -73,10 +73,11 @@ form.addEventListener("submit", (event) => {
                     email: data.email,
                     contact: data.contact
                 })
-            })
-            .then(openWhatsapp);
+            });
         } catch (error:any) {
-            console.error({error});
+            console.error({Erro: error?.message});
+        } finally {
+            openWhatsapp();
         }
     }
     event.preventDefault();
