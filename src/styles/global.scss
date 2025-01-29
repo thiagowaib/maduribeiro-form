@@ -22,7 +22,8 @@ main {
     background: rgb(30,30,30);
     background: linear-gradient(45deg, rgba(30,30,30,1) 0%, rgba(60,60,60,1) 100%);
     @media screen and (min-width: $breakpoint){
-        padding-bottom: 24px;
+    background: rgb(30,30,30);
+    padding-bottom: 24px;
     }
 }
 
@@ -33,23 +34,7 @@ section {
     @media screen and (min-width: $breakpoint){
         max-width: $container;
         width: 100%;
-        margin: 24px auto !important;
-        &::before {
-            position: absolute;
-            margin-left: calc($container * -1);
-            display: block;
-            content: '';
-            height: 100vh;
-            border: 1px solid $gr-200;
-        }
-        &::after {
-            position: absolute;
-            margin-right: calc($container * -1);
-            display: block;
-            content: '';
-            height: 100vh;
-            border: 1px solid $gr-200;
-        }
+        margin: 0 auto 24px auto !important;
     }
 }
 
@@ -59,7 +44,7 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    max-width: $container;
+    max-width: 100vw;
     display: flex;
     align-items: center;
     .title {
@@ -71,7 +56,7 @@ section {
         margin-left: 8%;
         border-radius: 100%;
         background: rgb(0,0,0);
-        background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, transparent 75%);
+        background: radial-gradient(circle, rgba(0,0,0,0.5) 0%, transparent 60%);
         #title-1 {
             font-size: $ft-xlg;
             padding-bottom: 4px;
@@ -83,15 +68,39 @@ section {
             margin-top: -6px;
             font-size: $ft-xxlg;
         }
-        @media screen and (min-width: $breakpoint){
-            padding: 5% 0;
+        @media screen and (min-width: $breakpoint-title){
+            display: none;
         }
     } 
+    .title#title-desktop {
+        display: none;
+        background: radial-gradient(circle, rgba(0,0,0,0.9) 0%, transparent 60%);
+
+        #title-1 {
+            @media screen and (min-width: $breakpoint-title-larger) {
+                font-size: 3rem;
+            }
+        }
+        #title-3 {
+            @media screen and (min-width: $breakpoint-title) {
+                font-size: 5rem;
+                text-align: right;
+            }
+            @media screen and (min-width: $breakpoint-title-larger) {
+                font-size: 6rem;
+                margin-top: -24px;
+            }
+        }
+
+        @media screen and (min-width: $breakpoint-title){
+            display: flex;
+
+            margin: 0 auto;
+            padding: 5% 0;
+        }
+    }
 }
 .line {
-    &::before, &::after {
-        content: none;
-    }
     width: fit-content;
     text-wrap: nowrap;
     text-align: center;
@@ -103,7 +112,7 @@ section {
         position: relative;
         left: 0;
         padding: 12px;
-        max-width: $container;
+        max-width: 100vw;
         overflow-x: hidden;
     }
     @media screen and (max-width: $smoll) {
@@ -113,12 +122,15 @@ section {
 .line#line-1 {
     margin-top: -16px;
     transform: rotateZ(-3deg);
+    transform-origin: 14%;
     @media screen and (min-width: $breakpoint) {
+        transform-origin: 50%;
         margin-top: -46px !important;
+        transform: rotate(0);
     }
 }
 .form {
-    margin: 64px 8% 36px 8%;
+    margin: 32px 8% 36px 8%;
     display: flex;
     color: $gr-100;
     text-align: center;
@@ -284,6 +296,7 @@ section {
             line-height: calc($ft-md + 2px);
             @media screen and (min-width: $breakpoint) {
                 font-size: 1.125rem;
+                line-height: calc($ft-lg);
             }
             span {
                 color: $gr-500;
